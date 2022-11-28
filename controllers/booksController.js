@@ -1,14 +1,15 @@
-const mongoose = require('mongoose')
-let uri = 'mongodb+srv://testuser:testuser@was500.u2a9nl5.mongodb.net/project5?retryWrites=true&w=majority';
+const mongoose = require('mongoose') //here we define mongoose for mngodb
+let uri = 'mongodb+srv://testuser:testuser@cluster0.drxe2xa.mongodb.net/project5?retryWrites=true&w=majority';
 mongoose.connect(uri, {
     useNewUrlParser: true, useUnifiedTopology: true
 }, (err) => {
     if(err){
         console.log(err)
     }else{
-        console.log('Successfully connected')
+        console.log('Successfully connected') //makes a connection and upon successful connection returns Successfully Connected.
     }
 })
+// here we fetch the books schema
 const Schema = mongoose.Schema;
 const BooksSchema = new Schema({
     name: String,
@@ -16,7 +17,7 @@ const BooksSchema = new Schema({
     description: String,
     book_image: String
 })
-
+// here we are dealing with books and render the Books list page
 const Books = mongoose.model("books", BooksSchema)
 exports.get = (req, res) => {
     Books.find({}, function(err, data) {
