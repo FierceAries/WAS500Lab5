@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <title>Bookslist</title>
+<head>
+  <!--Below in styles I define my settings for the navgation panel, which is margined to the left side of the screen and has a black background with
+  with white colored text-->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!--Here I described all the links in the navigation pane and attached the html pages to them-->
+  <%- include('navigation') %>
+    <div style="margin-left:20%;padding:1px 16px;height:1000px;">
+    <h1>The Three Books</h1>
+    <% books.forEach(function (book) { %>
+    <br>
+    <p><a href="/books/<%= book.id %>"><img src="/images/<%= book.book_image %>" height="250px" width="200px"><br><%= book.name %></a></p>
+    <br>
+    <% }) %>
+    <script>
+        console.log();
+    </script>
+</body>
+</html>

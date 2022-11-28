@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <title>Survey</title>
+<head>
+  <!--Below in styles I define my settings for the navgation panel, which is margined to the left side of the screen and has a black background with
+  with white colored text-->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!--below I have the links for other pages defined in the navigation panel list-->
+  <%- include('navigation') %>
+    <!--below I have the links and information for -->
+    <div style="margin-left:20%;padding:1px 16px;height:1000px;">
+    <h1>Survey</h1>
+    <p>Please Complete the Survey</p>
+    <form action="surveypage.html">
+        <p>Name:
+          <!--below is the Name form config-->
+            <input type="text" name="Name" size="15" maxlength="30" required/>
+            <!--below is the Calendar form config-->
+            <br> Date of Birth: 
+            <input type="date" name="Date of Birth" required>
+            <!--below is the Feeling form config-->
+            <br> How likely is that you recommend this library to your friends? 
+            <input type="radio" name="feeling"  value="Very Likely" required/> Very Likely
+            <input type="radio" name="feeling"  value="Somewhat Likely" required/> somewhat Likely
+            <input type="radio" name="feeling"  value="Not Likely" required/> not Likely
+            <br>
+            <!--below is the submit button-->
+            <input type="Submit" name="Submit" value="Submit" />
+        </p>
+    </form>
+    </div>
+</body>
+</html>

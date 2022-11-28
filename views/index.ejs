@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <title>Homepage</title>
+<head>
+  <!--Below in styles I define my settings for the navgation panel, which is margined to the left side of the screen and has a black background with
+  with white colored text-->
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!--Here I described all the links in the navigation pane and attached the html pages to them-->
+<%- include('navigation') %>
+    <!-- This is where I define the position of my container and move it to the (our) right handside of the webpage -->
+    <div style="margin-left:20%;padding:1px 16px;height:1000px;">
+      <!--The below lines of code display the text for the webpage-->
+    <h1>Welcome to the Library</h1>
+    <p> Welcome to the strangest library with only 3 books
+    <br>
+      Please Access the Navigation panel to explore the website
+    </p>
+</div>
+</body>
+</html>

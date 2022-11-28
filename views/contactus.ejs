@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <title>Contact Us</title>
+<head>
+  <!--Below in styles I define my settings for the navgation panel, which is margined to the left side of the screen and has a black background with
+  with white colored text-->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!--below I use the navig class and define the navigation panel list links-->
+  <div class="navig">
+    <%- include('navigation') %>
+    <!--below I define the Contact information and make it separate on every line-->
+  </div>
+  <div style="margin-left:20%;padding:1px 16px;height:1000px;">
+    <h1>Contact Us</h1>
+        <p>
+        Name: Usman Ahmad<br>
+        Email: suahmad1@myseneca.ca<br>
+        Location: 290 Bremner Blvd, Toronto, ON M5V 3L9
+        </p>
+        <!--I below embed a google map of the location-->
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2887.2692505416344!2d-79.3892454845026!3d43.642566179121665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b34d68bf33a9b%3A0x15edd8c4de1c7581!2sCN%20Tower!5e0!3m2!1sen!2sca!4v1664154195117!5m2!1sen!2sca" width="450" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </body>
+</html>
