@@ -12,7 +12,7 @@ mongoose.connect(uri, {
     if(err){
         console.log(err)
     }else{
-        console.log('Successfully connected')
+        console.log('Successfully connected: localhost:3000')
     }
 })
 // defining datasbase datatypes and characteristics
@@ -38,19 +38,20 @@ app.get('/contactus', (req, res) => {
 
 app.get('/contactus', (req, res) => {
     res.render('contactus');
-    //console.log(req, res)
+    console.log(req, res)
 })
 
 app.get('/surveypage', (req, res) => {
     res.render('surveypage');
-    //console.log(req, res)
+    console.log(req, res)
 })
 
 app.get('/honesty', (req, res) => {
     res.render('honesty');
-    //console.log(req, res)
+    console.log(req, res)
 })
 app.get('/booksList', (req, res) => {
+    console.log(req, res)
     Books.find({}, function(err, data) {
         res.render('booksList', {
             books: data
@@ -59,6 +60,7 @@ app.get('/booksList', (req, res) => {
 })
 // here we get books by ID
 app.get('/books/:bookID', (req, res) => {
+    console.log(req, res)
     Books.findOne({'_id': req.params.bookID}, function(err, data) {
         res.render('book', {
             book: data
@@ -66,6 +68,7 @@ app.get('/books/:bookID', (req, res) => {
     })
 })
 app.get('*', function(req, res){
+    console.log(req, res)
     res.status(404).send('The page you are looking for was not found!'); //here we return error of page not found, if we run into an error.
   })
 app.listen(3000)

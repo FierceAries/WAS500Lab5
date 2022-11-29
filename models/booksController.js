@@ -6,7 +6,7 @@ mongoose.connect(uri, {
     if(err){
         console.log(err)
     }else{
-        console.log('Successfully connected: Local Host 3000') //makes a connection and upon successful connection returns Successfully Connected.
+        console.log('Successfully connected: localhost 3000') //makes a connection and upon successful connection returns Successfully Connected.
     }
 })
 // here we fetch the books schema
