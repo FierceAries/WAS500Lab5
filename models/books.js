@@ -19,11 +19,5 @@ const BooksSchema = new Schema({
 })
 // here we are dealing with books and render the Books list page
 let Books = mongoose.model("books", BooksSchema)
-exports.get = (req, res) => {
-    Books.find({}, function(err, data) {
-        res.render('booksList', {
-            books: data
-        })
-        console.log(req, res)
-    })
-  }
+
+module.exports = Books
