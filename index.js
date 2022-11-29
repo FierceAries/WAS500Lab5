@@ -38,17 +38,17 @@ app.get('/contactus', (req, res) => {
 
 app.get('/contactus', (req, res) => {
     res.render('contactus');
-    console.log(req, res)
+    //console.log(req, res)
 })
 
 app.get('/surveypage', (req, res) => {
     res.render('surveypage');
-    console.log(req, res)
+    //console.log(req, res)
 })
 
 app.get('/honesty', (req, res) => {
     res.render('honesty');
-    console.log(req, res)
+    //console.log(req, res)
 })
 app.get('/booksList', (req, res) => {
     Books.find({}, function(err, data) {

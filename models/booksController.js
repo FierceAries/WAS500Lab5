@@ -6,7 +6,7 @@ mongoose.connect(uri, {
     if(err){
         console.log(err)
     }else{
-        console.log('Successfully connected') //makes a connection and upon successful connection returns Successfully Connected.
+        console.log('Successfully connected: Local Host 3000') //makes a connection and upon successful connection returns Successfully Connected.
     }
 })
 // here we fetch the books schema
@@ -18,11 +18,12 @@ const BooksSchema = new Schema({
     book_image: String
 })
 // here we are dealing with books and render the Books list page
-const Books = mongoose.model("books", BooksSchema)
+let Books = mongoose.model("books", BooksSchema)
 exports.get = (req, res) => {
     Books.find({}, function(err, data) {
         res.render('booksList', {
             books: data
         })
+        console.log(req, res)
     })
   }
